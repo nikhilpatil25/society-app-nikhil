@@ -1,0 +1,22 @@
+::ng-deep {
+    .accordion .card-header a,
+    .accordion .card-header button {
+        width: 100%;
+        text-align: left;
+    }
+    .accordion .card{
+        margin-bottom: 0;
+    }
+
+    #accordion11 .accordion .card,
+    #accordion12 .accordion .card{
+        .card-header a,
+        .card-header button{
+            background: #0162e8;
+            color: #fff;
+        }
+    }
+    #accordion12 .accordion .card .card-body{
+        padding: 1rem 
+    }
+}

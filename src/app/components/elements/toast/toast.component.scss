@@ -1,0 +1,12 @@
+::ng-deep{
+    ngb-toast .toast-header .close{
+        margin-left: 10px !important;
+    }
+    #tarns .close{
+        position: absolute !important;
+        right: 10px !important;
+    }
+    .toast{
+        width: 100% !important;
+    }
+}

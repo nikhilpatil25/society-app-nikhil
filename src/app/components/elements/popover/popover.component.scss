@@ -1,0 +1,10 @@
+::ng-deep{
+    .popover.fade.bs-popover-right{
+        transform: translate(10px, 41px) !important;
+    }
+    @media (max-width:992px) {
+        .popover.fade.bs-popover-left{
+            transform: translate(-10px, 41px) !important;
+        }
+    }
+}

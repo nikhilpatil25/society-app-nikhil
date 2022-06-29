@@ -1,0 +1,93 @@
+<!--/Horizontal-main -->
+<div class="sticky">
+        <div class="horizontal-main hor-menu clearfix">
+                <div class="horizontal-mainwrapper container clearfix p-0">
+    
+                        <!-- Navigation -->
+                        <nav class="horizontalMenu clearfix">
+                                <div class="horizontal-overlapbg" (click)="NavRemoveToggle()"></div>
+                                <!-- 1st level -->
+                                <ul class="horizontalMenu-list">
+                                        <li class="" *ngFor="let menuItem of menuItems"
+                                                [ngClass]="{active: menuItem.active}">
+                                                <!-- Link -->
+                                                <a class="sub-icon"
+                                                        [routerLink]="!menuItem.type ? null : [menuItem.path]"
+                                                        routerLinkActive="active" [ngClass]="{active: menuItem.active}"
+                                                        *ngIf="menuItem.type === 'link'">
+                                                        <i class="hor-icon material-icons-outlined">{{menuItem.icon}}</i>
+                                                        {{menuItem.title}}
+                                                </a>
+    
+                                                <!-- Sub -->
+                                                <a href="javascript:void(0)" class="sub-icon"
+                                                        [ngClass]="{active: menuItem.active}"
+                                                        *ngIf="menuItem.type === 'sub'"
+                                                        (click)="toggleNavActive(menuItem)">
+                                                        <i
+                                                                class="hor-icon material-icons-outlined">{{menuItem.icon}}</i>
+                                                        {{menuItem.title}}
+                                                        <!-- <i class="fa fa-angle-down horizontal-icon"
+                                                                *ngIf="menuItem.children"></i> -->
+                                                        <span class="horizontalMenu-click "
+                                                                [ngClass]="{'horizontal-activearrow': menuItem.active}">
+                                                                <i class="horizontalMenu-arrow fa fa-angle-down"></i>
+                                                        </span>
+                                                </a>
+    
+    
+                                                <!-- 2nd level -->
+                                                <ul class="sub-menu" [ngClass]="{active: menuItem.active}"
+                                                        *ngIf="menuItem.children">
+                                                        <li class="" *ngFor="let childrenItem of menuItem.children"
+                                                                [ngClass]="{active: childrenItem.active}">
+    
+                                                                <!-- Link -->
+                                                                <a [routerLink]="!childrenItem.type ? null : [childrenItem.path]"
+                                                                        *ngIf="childrenItem.type === 'link'"
+                                                                        routerLinkActive="active"
+                                                                        [routerLinkActiveOptions]="{exact: true}">
+                                                                        {{childrenItem.title}}
+                                                                </a>
+    
+                                                                <!-- Sub -->
+                                                                <a class="sub-menu-sub" href="javascript:void(0)"
+                                                                        *ngIf="childrenItem.type === 'sub'"
+                                                                        (click)="toggleNavActive(childrenItem)">
+                                                                        {{childrenItem.title}}
+                                                                        <span class="horizontalMenu-click02">
+                                                                                <i id="arrow"
+                                                                                        class="horizontalMenu-arrow fa fa-angle-down"
+                                                                                        [ngClass]="{'horizontalMenu-rotate': childrenItem.active}"></i>
+                                                                        </span>
+                                                                </a>
+    
+    
+                                                                <!-- 3rd level -->
+                                                                <ul class="sub-menu" *ngIf="childrenItem.children"
+                                                                        [ngClass]="{active: childrenItem.active}">
+                                                                        <li *ngFor="let childrenSubItem of childrenItem.children"
+                                                                                [ngClass]="{active: childrenSubItem.active}">
+                                                                                <!-- link -->
+                                                                                <a [routerLink]="!childrenSubItem.type ? null : [childrenSubItem.path]"
+                                                                                        *ngIf="childrenSubItem.type === 'link'"
+                                                                                        routerLinkActive="active"
+                                                                                        [routerLinkActiveOptions]="{exact : true}">
+                                                                                        {{childrenSubItem.title}}
+                                                                                </a>
+                                                                        </li>
+                                                                </ul>
+    
+                                                        </li>
+                                                </ul>
+                                        </li>
+    
+                                </ul>
+    
+                        </nav>
+    
+    
+                </div>
+        </div>
+    </div>
+    <!--/Horizontal-main -->

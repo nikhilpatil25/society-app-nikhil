@@ -1,0 +1,42 @@
+/* ###### 4.9 Perfect Scrollbar ###### */
+
+.ps {
+  overflow: hidden;
+
+  > .ps__rail-y {
+    width: 10px;
+    // background-color: rgb(97, 94, 94);
+    z-index: 10;
+    position: absolute;
+    left: auto !important;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    > .ps__thumb-y {
+      position: absolute;
+      border-radius: 0;
+      width: 8px;
+      left: 4px;
+    }
+  }
+
+  &.ps--active-y {
+    &:hover > .ps__rail-y, &:focus > .ps__rail-y {
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps > .ps__rail-y {
+    transition: none;
+  }
+}
+.ps__rail-y:hover > .ps__thumb-y,.ps__rail-y:focus > .ps__thumb-y,.ps__rail-y.ps--clicking .ps__thumb-y {
+  width: 8px;
+}
+
+.app.sidebar-mini.sidenav-toggled-open .ps > .ps__rail-y > .ps__thumb-y{
+  background-color: rgb(97, 94, 94) !important;
+}

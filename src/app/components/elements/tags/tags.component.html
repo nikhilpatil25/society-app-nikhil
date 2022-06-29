@@ -1,0 +1,286 @@
+					<!-- breadcrumb -->
+					<div class="breadcrumb-header justify-content-between">
+						<div class="my-auto">
+							<div class="d-flex">
+								<h4 class="content-title mb-0 my-auto">Elements</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Tags</span>
+							</div>
+						</div>
+						<div class="d-flex my-xl-auto right-content mr-2">
+							<div class="pr-1 mb-3 mb-xl-0">
+								<button type="button" class="btn btn-info btn-icon mr-2"><i class="mdi mdi-filter-variant"></i></button>
+							</div>
+							<div class="pr-1 mb-3 mb-xl-0">
+								<button type="button" class="btn btn-danger btn-icon mr-2"><i class="mdi mdi-star"></i></button>
+							</div>
+							<div class="pr-1 mb-3 mb-xl-0">
+								<button type="button" class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-refresh"></i></button>
+							</div>
+							<div class="mb-3 mb-xl-0">
+								<div ngbDropdown class="btn-group">
+									<button type="button" class="btn btn-primary">14 Aug 2019</button>
+									<button type="button" ngbDropdownToggle class="btn btn-primary dropdown-toggle-split" id="dropdownMenuDate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<div ngbDropdownMenu class="dropdown-menu-right" aria-labelledby="dropdownMenuDate" data-x-placement="bottom-end">
+										<a ngbDropdownItem href="javascript:;">2015</a>
+										<a ngbDropdownItem href="javascript:;">2016</a>
+										<a ngbDropdownItem href="javascript:;">2017</a>
+										<a ngbDropdownItem href="javascript:;">2018</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- breadcrumb -->
+
+					<!-- row -->
+					<div class="row">
+						<div class="col-xl-12 col-lg-12">
+							<!-- div -->
+							<div class="card">
+								<div class="card-body">
+									<div class="main-content-label mg-b-5">
+										DEFAULT TAG
+									</div>
+									<p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+									<div class="text-wrap">
+										<div class="example">
+											<span class="tag tag-default m-1">First tag</span>
+											<span class="tag tag-default m-1">Second tag</span>
+											<span class="tag tag-default m-1">Third tag</span>
+
+											<!-- <div class="tags">
+												<span class="tag">First tag</span>
+												<span class="tag">Second tag</span>
+												<span class="tag">Third tag</span>
+											</div> -->
+										</div>
+										<!-- Prism Code -->
+<figure class="highlight clip-widget" id="alert1">
+	<ul ngbNav #nav1="ngbNav" class="nav-tabs">
+		<li [ngbNavItem]="1">
+			<a ngbNavLink>HTML</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="html1"></code></pre>
+				<div ngxClipboard [cbContent]="html1" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+		<li [ngbNavItem]="2">
+			<a ngbNavLink>TS</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="ts1"></code></pre>
+				<div ngxClipboard [cbContent]="ts1" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+	</ul>
+	<div [ngbNavOutlet]="nav1"></div>
+
+</figure>
+
+<!-- End Prism Precode -->
+									</div>
+								</div>
+							</div>
+							<!--/div-->
+
+							<!--div-->
+							<div class="card">
+								<div class="card-body">
+									<div class="main-content-label mg-b-5">
+										Link Tag
+									</div>
+									<p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+									<div class="text-wrap">
+										<div class="example">
+											<span class="tag tag-rounded m-1">First tag</span>
+											<span class="tag tag-rounded m-1">Second tag</span>
+											<span class="tag tag-rounded m-1">Third tag</span>
+										</div>
+									<!-- Prism Code -->
+<figure class="highlight clip-widget" id="alert1">
+	<ul ngbNav #nav2="ngbNav" class="nav-tabs">
+		<li [ngbNavItem]="1">
+			<a ngbNavLink>HTML</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="html2"></code></pre>
+				<div ngxClipboard [cbContent]="html2" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+		<li [ngbNavItem]="2">
+			<a ngbNavLink>TS</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="ts2"></code></pre>
+				<div ngxClipboard [cbContent]="ts2" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+	</ul>
+	<div [ngbNavOutlet]="nav2"></div>
+
+</figure>
+
+<!-- End Prism Precode -->
+									</div>
+								</div>
+							</div>
+							<!--/div-->
+
+							<!--div-->
+							<div class="card">
+								<div class="card-body">
+									<div class="main-content-label mg-b-5">
+										Default Tags Addon
+									</div>
+									<p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+									<div class="text-wrap">
+										<div class="example">
+											<span class="tag tag-default">One
+												<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+											</span>
+											<span class="tag tag-default">Two
+												<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+											</span>
+											<span class="tag tag-default">Three
+												<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+											</span>
+											<span class="tag tag-default">Four
+												<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+											</span>
+											<!-- <div class="tags">
+												<span class="tag tag-default">
+													One
+													<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+												</span>
+												<span class="tag tag-default">
+													Two
+													<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+												</span>
+												<span class="tag tag-default">
+													Three
+													<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+												</span>
+												<span class="tag tag-default">
+													Four
+													<a href="javascript:void(0)" class="tag-addon"><i class="fe fe-x"></i></a>
+												</span>
+											</div> -->
+										</div>
+										<!-- Prism Code -->
+<figure class="highlight clip-widget" id="alert1">
+	<ul ngbNav #nav3="ngbNav" class="nav-tabs">
+		<li [ngbNavItem]="1">
+			<a ngbNavLink>HTML</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="html3"></code></pre>
+				<div ngxClipboard [cbContent]="html3" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+		<li [ngbNavItem]="2">
+			<a ngbNavLink>TS</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="ts3"></code></pre>
+				<div ngxClipboard [cbContent]="ts3" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+	</ul>
+	<div [ngbNavOutlet]="nav3"></div>
+
+</figure>
+
+<!-- End Prism Precode -->
+									</div>
+								</div>
+							</div>
+							<!--/div-->
+
+							<!--div-->
+							<div class="card">
+								<div class="card-body">
+									<div class="main-content-label mg-b-5">
+										Colored tags
+									</div>
+									<p class="mg-b-20">It is Very Easy to Customize and it uses in your website aplication.</p>
+									<div class="text-wrap">
+										<div class="example">
+											<div class="tags">
+												<span class="tag tag-blue">Blue tag</span>
+												<span class="tag tag-azure">Azure tag</span>
+												<span class="tag tag-indigo">Indigo tag</span>
+												<span class="tag tag-purple">Purple tag</span>
+												<span class="tag tag-pink">Pink tag</span>
+												<span class="tag tag-red">Red tag</span>
+												<span class="tag tag-orange">Orange tag</span>
+												<span class="tag tag-yellow">Yellow tag</span>
+												<span class="tag tag-lime">Lime tag</span>
+												<span class="tag tag-green">Green tag</span>
+												<span class="tag tag-teal">Teal tag</span>
+												<span class="tag tag-cyan">Cyan tag</span>
+												<span class="tag tag-gray">Gray tag</span>
+												<span class="tag tag-gray-dark">Dark gray tag</span>
+											</div>
+										</div>
+										<!-- Prism Code -->
+<figure class="highlight clip-widget" id="alert1">
+	<ul ngbNav #nav4="ngbNav" class="nav-tabs">
+		<li [ngbNavItem]="1">
+			<a ngbNavLink>HTML</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="html4"></code></pre>
+				<div ngxClipboard [cbContent]="html4" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+		<li [ngbNavItem]="2">
+			<a ngbNavLink>TS</a>
+			<ng-template ngbNavContent>
+				<pre><code [highlight]="ts4"></code></pre>
+				<div ngxClipboard [cbContent]="ts4" >
+					<div class="clipboard-icon" container="body" placement="top" ngbTooltip="Copy To Clipboard">
+						<i class="fa fa-clipboard"></i>
+					</div>
+				</div>
+			</ng-template>
+		</li>
+	</ul>
+	<div [ngbNavOutlet]="nav4"></div>
+
+</figure>
+
+<!-- End Prism Precode -->
+									</div>
+								</div>
+							</div>
+							<!--/div-->
+
+							<!--div-->
+							
+						</div>
+						<!--/div-->
+					</div>
+					<!-- /row -->

@@ -1,0 +1,53 @@
+.dropdown-toggle::after{
+    display: none !important;
+}
+
+.dropdown-menu.dropdown-menu-right{
+    left:  initial !important;
+    right:0;
+}
+
+::ng-deep{
+    rect{
+        stroke: none !important;
+    }
+    fusioncharts g path{
+        fill: #409cff !important;
+    }
+    fusioncharts g path:hover{
+        fill: #094b92 !important;
+    }
+
+    .apexcharts-gridlines-horizontal line,
+    .apexcharts-gridlines-vertical line{
+        stroke: rgba(255, 255, 255, 0.2) !important;
+    }
+}
+
+.table > :not(:last-child) > :last-child > *{
+    border-bottom-color: rgba(226, 232, 245, 0.1) !important;
+}
+#chart {
+    margin-bottom: 4rem;
+}
+
+.card-dashboard-map-one{
+    padding: 12px !important;
+}
+
+.customers .list-group-item {
+    padding: 0.75rem 1.25rem;
+}
+
+::ng-deep {
+    .ng-dropdown-panel {
+        z-index: 3 !important;
+    }
+
+    @media (max-width:480px) {
+        aw-wizard-navigation-bar.horizontal ul.steps-indicator li a .label {
+            display: none;
+        }
+    }
+
+}

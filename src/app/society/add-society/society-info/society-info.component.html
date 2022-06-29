@@ -1,0 +1,550 @@
+<form [formGroup]="firstFormGroup">
+  <div class="col-md-12">
+    <div class="main-content-label mg-b-5" style="margin-top: 20px">
+      SOCIETY DETAILS
+    </div>
+
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-3">
+        <div class="form-group">
+          <div class="input-group mb-3" style="justify-content: center">
+            <div class="main-img-user avatar-xxl d-none d-sm-block">
+              <img
+                alt="avatar"
+                class="rounded-circle"
+                src="./assets/img/faces/8.jpg"
+              />
+            </div>
+
+            <div class="row" style="margin-top: 15px">
+              <div class="col-sm">
+                <div class="input-group file-browser">
+                  <input
+                    type="file"
+                    class="form-control browse-file"
+                    multiple
+                    id="file"
+                    (change)="onFileChange($event.target.files)"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <ng-select
+                class="form-control"
+                placeholder="Select Society Type"
+                required=""
+              >
+                <small class="text-danger">Society Type Required</small>
+                <ng-option value="Firefox"> Select Society Type </ng-option>
+                <ng-option value="abc"> Residential </ng-option>
+                <ng-option value="Chrome"> Commercial </ng-option>
+              </ng-select>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <ng-select
+                class="form-control"
+                placeholder="Select Sub Type"
+                required=""
+              >
+                <small class="text-danger">Society Sub Type Required</small>
+                <ng-option value="Firefox"> Select Sub Type </ng-option>
+                <ng-option value="Firefox2"> Society </ng-option>
+                <ng-option value="Chrome1"> Bungalow </ng-option>
+                <ng-option value="Chrome2"> Row House </ng-option>
+                <ng-option value="Chrome3"> Plot </ng-option>
+              </ng-select>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Society Name"
+                formControlName="societyName"
+              />
+              <ng-container
+                class="invalid"
+                *ngIf="
+                  firstFormGroup.get('societyName')?.hasError('required') &&
+                  firstFormGroup.get('societyName')?.touched
+                "
+              >
+                <small class="tx-danger">Society Name is required</small>
+              </ng-container>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="regno"
+                placeholder="Registration No"
+                formControlName="regNo"
+              />
+              <ng-container
+                class="invalid"
+                *ngIf="
+                  firstFormGroup.get('regNo')?.hasError('required') &&
+                  firstFormGroup.get('regNo')?.touched
+                "
+              >
+                <small class="tx-danger">Registration No is required</small>
+              </ng-container>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                class="form-control"
+                placeholder="Registration Date"
+                name="dp"
+                [(ngModel)]="model"
+                ngbDatepicker
+                (click)="d.toggle()"
+                #d="ngbDatepicker"
+                formControlName="regDate"
+              />
+
+              <ng-container
+                class="invalid"
+                *ngIf="
+                  firstFormGroup.get('regDate')?.hasError('required') &&
+                  firstFormGroup.get('regDate')?.touched
+                "
+              >
+                <small class="tx-danger">Registration Date is required</small>
+              </ng-container>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Primary Email ID"
+                formControlName="primaryEmail"
+              />
+              <ng-container
+                class="invalid"
+                *ngIf="
+                  firstFormGroup.get('primaryEmail')?.hasError('required') &&
+                  firstFormGroup.get('primaryEmail')?.touched
+                "
+              >
+                <small class="tx-danger">Email is required</small>
+              </ng-container>
+              <ng-container
+                class="invalid"
+                *ngIf="
+                  firstFormGroup.get('primaryEmail')?.hasError('email') &&
+                  firstFormGroup.get('primaryEmail')?.touched
+                "
+              >
+                <small class="tx-danger">Email is not valid</small>
+              </ng-container>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="secondaryemail"
+                placeholder="Secondary Email ID"
+                formControlName="secondaryEmail"
+              />
+
+              <ng-container
+                class="invalid"
+                *ngIf="
+                  firstFormGroup.get('secondaryEmail')?.hasError('email') &&
+                  firstFormGroup.get('secondaryEmail')?.touched
+                "
+              >
+                <small class="tx-danger">Email is not valid</small>
+              </ng-container>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="phone"
+                class="form-control"
+                id="contact"
+                placeholder="Contact No"
+                formControlName="contactNo"
+                minlength="10"
+                maxlength="10"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              />
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="Society Address"
+                formControlName="societyAddress"
+              />
+              <ng-container
+                class="invalid"
+                *ngIf="
+                  firstFormGroup.get('societyAddress')?.hasError('required') &&
+                  firstFormGroup.get('societyAddress')?.touched
+                "
+              >
+                <small class="tx-danger">Address is required</small>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="pincode"
+            placeholder="Society Pincode"
+            formControlName="societyPincode"
+          />
+          <ng-container
+            class="invalid"
+            *ngIf="
+              firstFormGroup.get('societyPincode')?.hasError('required') &&
+              firstFormGroup.get('societyPincode')?.touched
+            "
+          >
+            <small class="tx-danger">Pincode is required</small>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="location"
+            placeholder="Society Location"
+            formControlName="societyLocation"
+          />
+          <ng-container
+            class="invalid"
+            *ngIf="
+              firstFormGroup.get('societyLocation')?.hasError('required') &&
+              firstFormGroup.get('societyLocation')?.touched
+            "
+          >
+            <small class="tx-danger">Location is required</small>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="city"
+            placeholder="Society City"
+            formControlName="societyCity"
+          />
+          <ng-container
+            class="invalid"
+            *ngIf="
+              firstFormGroup.get('societyCity')?.hasError('required') &&
+              firstFormGroup.get('societyCity')?.touched
+            "
+          >
+            <small class="tx-danger">City is required</small>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="state"
+            placeholder="Society State"
+            formControlName="societyState"
+          />
+          <ng-container
+            class="invalid"
+            *ngIf="
+              firstFormGroup.get('societyState')?.hasError('required') &&
+              firstFormGroup.get('societyState')?.touched
+            "
+          >
+            <small class="tx-danger">State is required</small>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="gstIn"
+            placeholder="GSTIN"
+          />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="uidNo"
+            placeholder="UID No"
+          />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="pan"
+            placeholder="PAN No"
+          />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="tan"
+            placeholder="TAN No"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <ng-select
+            class="form-control"
+            placeholder="Select Area Type"
+            required=""
+          >
+            <ng-option value="Firefox"> Select Area Type </ng-option>
+            <ng-option value="abc"> Carpet </ng-option>
+            <ng-option value="Chrome"> Built Up </ng-option>
+          </ng-select>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <ng-select
+            class="form-control"
+            placeholder="Select Area Unit Type"
+            required=""
+          >
+            <ng-option value="Firefox"> Select Area Unit Type </ng-option>
+            <ng-option value="Firefox"> Squar Feet </ng-option>
+            <ng-option value="Firefox"> Squar Meter </ng-option>
+          </ng-select>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="form-group">
+          <ng-select
+            class="form-control"
+            placeholder="Choose Secondary Language"
+            required=""
+          >
+            <ng-option value="Firefox"> Choose Secondary Language </ng-option>
+            <ng-option value="Fire1"> Hindi </ng-option>
+            <ng-option value="Fire2"> Marathi </ng-option>
+            <ng-option value="Chrome"> Other </ng-option>
+          </ng-select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <ng-select
+            class="form-control"
+            placeholder="Is GST Included"
+            required=""
+            (change)="onDrop($event)"
+          >
+            <ng-option value="0"> Is GST Included </ng-option>
+            <ng-option value="1"> Yes </ng-option>
+            <ng-option value="2"> No </ng-option>
+          </ng-select>
+        </div>
+      </div>
+      <div class="col-md-12" *ngIf="isThirdInputFieldVisible">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="cgstaccount"
+                placeholder="CGST Account Code"
+                *ngIf="isThirdInputFieldVisible"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="sgstaccount"
+                placeholder="SGST Account Code"
+                *ngIf="isThirdInputFieldVisible"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <ng-select
+                class="form-control"
+                placeholder="Interest on Dues Apply for GST"
+                required=""
+              >
+                <ng-option value="Firefox">
+                  Interest on Dues Apply for GST
+                </ng-option>
+                <ng-option value="Firefox"> Yes </ng-option>
+                <ng-option value="Chrome"> No </ng-option>
+              </ng-select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <ng-select
+                class="form-control"
+                placeholder="Interest on Dues Apply for GST Exampt Amount Limit"
+                required=""
+              >
+                <ng-option value="Firefox">
+                  Interest on Dues Apply for GST Exampt Amount Limit
+                </ng-option>
+                <ng-option value="Firefox"> Yes </ng-option>
+                <ng-option value="Chrome"> No </ng-option>
+              </ng-select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="ratecgst"
+                placeholder="Rate of CGST"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="ratesgst"
+                placeholder="Rate of SGST"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="cgstrounded"
+                placeholder="CGST Rounded Upto"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="sgstrounded"
+                placeholder="SGST Rounded Upto"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="limit"
+                placeholder="Limit of GST Exampt"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="message"
+              placeholder="Special Message(if any)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="btn btn-primary pull-right"
+    awNextStep
+    [disabled]="!firstFormGroup.valid"
+  >
+    Next</button
+  ><span></span>
+
+  <button
+    style="margin-left: 10px"
+    class="btn btn-primary pull-right"
+    (click)="onSave()"
+  >
+    Save</button
+  ><span></span>
+
+  <button
+    class="btn btn-primary pull-right"
+    type="submit"
+    awNextStep
+    [disabled]="firstFormGroup.invalid"
+    style="margin-left: 10px"
+  >
+    Cancel
+  </button>
+</form>

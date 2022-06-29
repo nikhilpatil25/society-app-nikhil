@@ -1,0 +1,11 @@
+::ng-deep {
+    .main-dropdown-form-demo {
+        .dropdown-toggle::after,
+        &.dropup .dropdown-toggle::after {
+            display: none;
+        }
+    }
+    .ng-dropdown-panel{
+        z-index: 3 !important;
+    }
+}

@@ -1,0 +1,177 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+	<div class="my-auto">
+		<div class="d-flex">
+			<h4 class="content-title mb-0 my-auto">Forms</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/
+				Form-Advanced</span>
+		</div>
+	</div>
+	<div class="d-flex my-xl-auto right-content mr-2">
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-info btn-icon mr-2"><i class="mdi mdi-filter-variant"></i></button>
+		</div>
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-danger btn-icon mr-2"><i class="mdi mdi-star"></i></button>
+		</div>
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-refresh"></i></button>
+		</div>
+		<div class="mb-3 mb-xl-0">
+			<div ngbDropdown class="btn-group">
+				<button type="button" class="btn btn-primary">14 Aug 2019</button>
+				<button type="button" ngbDropdownToggle class="btn btn-primary dropdown-toggle-split"
+					id="dropdownMenuDate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<div ngbDropdownMenu class="dropdown-menu-right" aria-labelledby="dropdownMenuDate"
+					data-x-placement="bottom-end">
+					<a ngbDropdownItem href="javascript:;">2015</a>
+					<a ngbDropdownItem href="javascript:;">2016</a>
+					<a ngbDropdownItem href="javascript:;">2017</a>
+					<a ngbDropdownItem href="javascript:;">2018</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+<div class="row">
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Single Select Style</h6>
+					<p class="text-muted card-sub-title">Single Select using angular2-multiselect-dropdown</p>
+				</div>
+				<div class="mb-4">
+					<p class="mg-b-10">Single Select</p>
+					<angular2-multiselect [data]="MultiseletDropDown" [(ngModel)]="SingleItems"
+						[settings]="SingleSettings"> </angular2-multiselect>
+				</div>
+				<div class="mb-4">
+					<p class="mg-b-10">Disabled Select</p>
+
+					<angular2-multiselect [data]="MultiseletDropDown" [(ngModel)]="DisableItem"
+						[settings]="DisableSettings" class="SlectBox "></angular2-multiselect>
+
+				</div>
+				<div>
+					<p class="mg-b-10">Single Select with Search</p>
+
+					<angular2-multiselect [data]="MultiseletDropDown1" [(ngModel)]="SingleSearchItem"
+						[settings]="SingleSearchSettings" class="SlectBox"></angular2-multiselect>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Multiple Select Styles</h6>
+					<p class="text-muted card-sub-title">Multiple Select using angular2-multiselect-dropdown</p>
+				</div>
+				<div class="mb-4">
+					<p class="mg-b-10">Multiple Select</p>
+					<angular2-multiselect [data]="MultiseletDropDown" [(ngModel)]="multipleItems"
+						[settings]="multipleSettings" class="testselect2"> </angular2-multiselect>
+				</div>
+				<div class="mb-4">
+					<p class="mg-b-10">Disabled Select</p>
+					<angular2-multiselect [data]="MultiseletDropDown" [(ngModel)]="DisableItem"
+						[settings]="DisableSettings" class="testselect2"> </angular2-multiselect>
+				</div>
+				<div>
+					<p class="mg-b-10">Option Group Support</p>
+					<angular2-multiselect [data]="groupDropdown" [(ngModel)]="groupItems" [settings]="groupSettings">
+					</angular2-multiselect>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+	<div class="col-lg-12 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">Telephone Input</h6>
+					<p class="text-muted card-sub-title">Plugin for entering and validating international telephone
+						numbers. It adds a flag dropdown to any input, detects the user's country, displays a relevant
+						placeholder and provides formatting/validation methods.</p>
+				</div>
+				<div class="input-group telephone-input col-lg-4 col-md-8">
+					<ngx-intl-tel-input [cssClass]="'custom'"
+						[preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
+						[enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true"
+						[searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+						[selectFirstCountry]="false" [selectedCountryISO]="CountryISO.India" [maxLength]="15" 
+						[phoneValidation]="true" name="phone" class="form-control">
+					</ngx-intl-tel-input>
+					<span class="input-group-btn">
+						<button class="btn ripple btn-primary" type="button">Submit</button>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /row -->
+
+<!-- row -->
+<div class="row">
+	<div class="col-lg-12 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<div>
+					<h6 class="card-title mb-1">File Upload</h6>
+					<p class="text-muted card-sub-title">Dropify is to create a beautiful file uploader
+						that converts a standard <code>input type="file"</code> into a nice drag & drop zone with
+						previews and custom styles.</p>
+				</div>
+				<div class="row mb-4">
+					<div class="col-sm-12 col-md-4">
+						<div class="dropzone dropzone-primary" [dropzone]="config1">
+							<div class="dz-message needsclick">
+								<i class="fe fe-upload-cloud" aria-hidden="true"></i>
+								<h6>Drop files here or click to upload.</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 mg-t-10 mg-sm-t-0">
+						<div class="dropzone dropzone-primary" [dropzone]="config2">
+							<div class="dz-message needsclick">
+								<i class="fe fe-upload-cloud" aria-hidden="true"></i>
+								<h6>Drop Multiple files here or click to upload multiple files.</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4 mg-t-10 mg-sm-t-0">
+						<div class="dropzone dropzone-primary disable" [dropzone]="config2" disabled="disabled">
+							<div class="dz-message needsclick">
+								<i class="fe fe-upload-cloud" aria-hidden="true"></i>
+								<h6>Drop Disabled.</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="dropzone dropzone-primary" [dropzone]="config3">
+						<div class="dz-message needsclick">
+							<i class="fe fe-upload-cloud" aria-hidden="true"></i>
+							<h6>Drop only .png files here or click to upload.</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- row closed -->

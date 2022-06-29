@@ -1,0 +1,36 @@
+<div class="main-body app sidebar-mini" [ngClass]="mainSidebarOpen">
+    <!-- Page -->
+    <div class="page">
+
+        <!-- main-sidebar -->
+        <app-sidemenu (mouseover)="hoverEffect($event)" (mouseout)="hoverEffect($event)"></app-sidemenu>
+        <!-- <app-sidemenu></app-sidemenu> -->
+        <!-- main-sidebar -->
+
+        <!-- main-content -->
+        <div class="main-content app-content">
+
+            <!-- main-header -->
+            <app-header></app-header>
+            <div class="jumps-prevent" style="padding-top: 63px;"></div>
+            <!-- /main-header -->
+
+            <!-- container -->
+            <div class="container-fluid" (click)="clickOnBody()">
+                <router-outlet></router-outlet>
+            </div>
+            <!-- /Container -->
+        </div>
+        <!-- /main-content -->
+
+        <!-- Sidebar-right-->
+        <app-notification-sidebar></app-notification-sidebar>
+        <!--/Sidebar-right-->
+
+        <!-- Footer opened -->
+        <app-footer></app-footer>
+        <!-- Footer closed -->
+
+    </div>
+    <!-- End Page -->
+</div>

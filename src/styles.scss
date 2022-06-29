@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/app_styles.scss";
+@import "assets/css/icons.css";
+@import "assets/css/animate.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ng-select.ng-select-opened .ng-select-container,
+.ng-dropdown-panel
+{
+    z-index: 55 !important;
+}

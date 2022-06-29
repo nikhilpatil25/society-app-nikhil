@@ -1,0 +1,58 @@
+.dropdown-toggle::after{
+    display: none !important;
+}
+
+::ng-deep{
+    @media screen and (min-width:769px)  and (max-width: 991px){
+        .active.menu-open .main-header.nav.nav-item.hor-header {
+            margin-left: 240px ;
+            transition: all 0.5s ease-in-out !important;
+        }
+    }
+    @media (min-width: 768px){
+        .main-header {
+            padding-left: 0px !important;
+        }
+    }
+    @media only screen and (max-width: 991px){
+        .desktop-logo, .desktop-logo-1 {
+            margin-left: 1rem !important;
+        }
+    }
+    
+    @media only screen and (max-width: 360px){
+        .desktop-logo-1 {
+            margin-left: 0rem !important;
+        }
+    }
+
+
+    .main-header{
+        z-index: 99999 !important;
+    }
+}
+
+@media (max-width: 480px){
+    .main-header-right .nav .nav-item .dropdown-menu {
+        left: 5px !important;
+        right: 5px !important;
+        position: fixed !important;
+        transform: translate(0,65px) !important;
+    }
+}
+
+.main-profile-menu .dropdown-menu
+{
+    transform: translate(-200px, 54px) !important;
+}
+
+.main-header-notification .dropdown-menu,
+.main-header-message .dropdown-menu
+{
+    transform: translate(-245px, 54px) !important;
+}
+@media (min-width:320px) and (max-width:328px) {
+    .nav-link#bs-example-navbar-collapse-1{
+        padding: 0.6rem 0rem !important;
+    }
+}
